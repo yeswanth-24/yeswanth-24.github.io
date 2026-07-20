@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeshvanth — ML/AI Engineer</title>
+<meta name="description" content="ML/AI Engineer building computer vision, NLP, and real-time ML systems end to end. 8 open-source projects.">
+<style>
+  :root {
+    --bg: #0b0e14; --panel: #12161f; --panel2: #171c27; --line: #232a38;
+    --text: #e6e9f0; --muted: #8b93a5; --accent: #5b9dff; --accent2: #3ecf8e;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.6; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  nav { position: sticky; top: 0; background: rgba(11,14,20,.85); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); z-index: 10; }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .logo { font-family: var(--mono); color: var(--accent2); font-weight: 600; }
+  nav .links a { color: var(--muted); margin-left: 22px; font-size: .95rem; }
+  nav .links a:hover { color: var(--text); text-decoration: none; }
+
+  header { padding: 96px 0 72px; }
+  .kicker { font-family: var(--mono); color: var(--accent2); font-size: .95rem; margin-bottom: 14px; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.12; letter-spacing: -.02em; }
+  h1 .accent { color: var(--accent); }
+  .tagline { color: var(--muted); font-size: 1.15rem; max-width: 640px; margin-top: 18px; }
+  .cta { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 600; }
+  .btn.primary { background: var(--accent); color: #0b0e14; }
+  .btn.ghost { border: 1px solid var(--line); color: var(--text); }
+  .btn:hover { text-decoration: none; filter: brightness(1.1); }
+
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.6rem; margin-bottom: 8px; }
+  .sectionsub { color: var(--muted); margin-bottom: 36px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; transition: transform .15s ease, border-color .15s ease; }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .card.featured { background: linear-gradient(160deg, var(--panel2), var(--panel)); grid-column: span 2; }
+  @media (max-width: 720px) { .card.featured { grid-column: span 1; } }
+  .card h3 { font-size: 1.12rem; margin-bottom: 8px; }
+  .card h3 a { color: var(--text); }
+  .card p { color: var(--muted); font-size: .95rem; flex: 1; }
+  .badge { display: inline-block; font-family: var(--mono); font-size: .72rem; color: var(--accent2); border: 1px solid #234; border-radius: 20px; padding: 2px 10px; margin-bottom: 12px; width: fit-content; }
+  .tags { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-family: var(--mono); font-size: .74rem; color: var(--accent); background: #16202f; border-radius: 5px; padding: 3px 8px; }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill { font-family: var(--mono); font-size: .88rem; background: var(--panel); border: 1px solid var(--line); padding: 8px 14px; border-radius: 8px; }
+
+  .contactrow { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: .85rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="logo">yeshvanth@ml:~$</span>
+  <span class="links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/yeswanth-24" target="_blank" rel="noopener">GitHub</a>
+  </span>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="kicker">// ML/AI Engineer</div>
+  <h1>I build machine-learning systems<br><span class="accent">end to end.</span></h1>
+  <p class="tagline">Computer vision, NLP, and real-time ML — from the geometry and model math to tested APIs, web and mobile clients, and one-command deploys. Eight open-source projects below.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See my work</a>
+    <a class="btn ghost" href="mailto:yeshvanthreddy1999@gmail.com">Get in touch</a>
+  </div>
+</div></header>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="sectionsub">All open source · <a href="https://github.com/yeswanth-24" target="_blank" rel="noopener">github.com/yeswanth-24</a></p>
+  <div class="grid">
+
+    <div class="card featured">
+      <span class="badge">FEATURED · CV + ML + 3D</span>
+      <h3><a href="https://github.com/yeswanth-24/ai-digital-tailor" target="_blank" rel="noopener">AI Digital Tailor</a></h3>
+      <p>Photos → body measurements → size prediction → skin-tone-matched 3D avatar → virtual try-on. Guided real-time browser capture with live pose-quality coaching, multi-angle reconstruction, a numpy logistic-regression fit model, and a Flutter mobile client. Docker-deployable FastAPI backend.</p>
+      <div class="tags"><span class="tag">MediaPipe</span><span class="tag">FastAPI</span><span class="tag">numpy ML</span><span class="tag">3D geometry</span><span class="tag">Flutter</span><span class="tag">Docker</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">CV + ML</span>
+      <h3><a href="https://github.com/yeswanth-24/ai-workout-coach" target="_blank" rel="noopener">AI Workout Coach</a></h3>
+      <p>Real-time exercise coaching: pose estimation feeds hysteresis rep-counting state machines with form cues across 8 exercises, a live workout mode with exercise switching, and a daily-progress dashboard.</p>
+      <div class="tags"><span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">SQLite</span><span class="tag">Streamlit</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">CV + NLP</span>
+      <h3><a href="https://github.com/yeswanth-24/gesture-coding-assistant" target="_blank" rel="noopener">Gesture Coding Assistant</a></h3>
+      <p>Write code with hand gestures + voice: rotation-invariant gesture classification, a voice-command grammar, Python/JS code generation, and keystroke injection into any IDE.</p>
+      <div class="tags"><span class="tag">MediaPipe Hands</span><span class="tag">Speech</span><span class="tag">Codegen</span><span class="tag">pynput</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">DISTRIBUTED SYSTEMS</span>
+      <h3><a href="https://github.com/yeswanth-24/multi-agent-orchestrator" target="_blank" rel="noopener">Multi-Agent Task Orchestrator</a></h3>
+      <p>Five specialized agents collaborate over Redis Pub/Sub to plan, decompose, execute, monitor, and recover complex tasks — with a live Gantt timeline of every step.</p>
+      <div class="tags"><span class="tag">Redis</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">STREAMING</span>
+      <h3><a href="https://github.com/yeswanth-24/realtime-stream-engine" target="_blank" rel="noopener">Real-Time Stream Engine</a></h3>
+      <p>Event streaming through Redis Streams with consumer groups, z-score + threshold anomaly detection, tiered alert streams, and a live dashboard.</p>
+      <div class="tags"><span class="tag">Redis Streams</span><span class="tag">Anomaly detection</span><span class="tag">FastAPI</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">FORECASTING</span>
+      <h3><a href="https://github.com/yeswanth-24/predictive-analytics-platform" target="_blank" rel="noopener">Predictive Analytics Platform</a></h3>
+      <p>End-to-end time-series pipeline: ETL into a SQLite warehouse, ARIMA training with persisted model artifacts, forecast tables, API + dashboard.</p>
+      <div class="tags"><span class="tag">ARIMA</span><span class="tag">ETL</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">NLP</span>
+      <h3><a href="https://github.com/yeswanth-24/personal-finance-assistant" target="_blank" rel="noopener">Personal Finance Assistant</a></h3>
+      <p>Natural-language money tracking: intent classification and entity extraction route chat messages ("log 240 on groceries yesterday") through validation into a personal-finance database. React chat UI.</p>
+      <div class="tags"><span class="tag">scikit-learn</span><span class="tag">FastAPI</span><span class="tag">React</span></div>
+    </div>
+
+    <div class="card">
+      <span class="badge">MOBILE + FINTECH</span>
+      <h3><a href="https://github.com/yeswanth-24/options-strategy-visualizer" target="_blank" rel="noopener">Options Strategy Visualizer</a></h3>
+      <p>Build, visualize, and compare options strategies with a live payoff engine — clean-architecture Flutter app for every platform, FastAPI backend with Google OAuth.</p>
+      <div class="tags"><span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">OAuth</span></div>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <p class="sectionsub">Used across the projects above — not aspirational.</p>
+  <div class="skills">
+    <span class="skill">Python</span><span class="skill">Computer Vision</span><span class="skill">MediaPipe</span>
+    <span class="skill">OpenCV</span><span class="skill">Machine Learning</span><span class="skill">scikit-learn</span>
+    <span class="skill">NLP</span><span class="skill">Time-Series Forecasting</span><span class="skill">3D Geometry</span>
+    <span class="skill">FastAPI</span><span class="skill">REST APIs</span><span class="skill">Redis</span>
+    <span class="skill">SQLite / SQL</span><span class="skill">Streamlit</span><span class="skill">Flutter / Dart</span>
+    <span class="skill">React</span><span class="skill">JavaScript</span><span class="skill">Docker</span>
+    <span class="skill">CI/CD (GitHub Actions)</span><span class="skill">pytest</span><span class="skill">Git</span>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <p class="sectionsub">Open to ML/AI engineering roles and interesting problems.</p>
+  <div class="contactrow">
+    <a class="btn primary" href="mailto:yeshvanthreddy1999@gmail.com">yeshvanthreddy1999@gmail.com</a>
+    <a class="btn ghost" href="https://github.com/yeswanth-24" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Yeshvanth</span>
+  <span>Built by hand — no template.</span>
+</div></footer>
+
+</body>
+</html>
