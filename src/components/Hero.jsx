@@ -7,13 +7,13 @@ const ROLES = [
   "real-time ML systems",
   "NLP interfaces",
   "3D reconstruction",
-  "mobile ML apps",
+  "autonomy stacks",
 ];
 
 const TELEMETRY = [
-  ["SHIPPED", "8 systems · all open source"],
-  ["RIGOR", "93 tests · CI on every repo"],
-  ["RANGE", "model math → mobile app"],
+  ["EXPERIENCE", "CTO · 12-layer drone autonomy stack"],
+  ["SHIPPED", "8 open-source systems · 93 tests"],
+  ["RANGE", "ROS2 & EKF → model math → mobile app"],
 ];
 
 export default function Hero() {

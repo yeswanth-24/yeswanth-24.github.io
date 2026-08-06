@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 const metrics = [
   { value: "8", label: "systems shipped", sub: "all open source, all documented" },
   { value: "93", label: "automated tests", sub: "on the three newest projects alone" },
-  { value: "3", label: "client surfaces", sub: "web, mobile and CLI from one backend" },
+  { value: "12", label: "layer autonomy stack", sub: "architected as CTO at Entriya" },
   { value: "100%", label: "with CI + README", sub: "no repo left half-finished" },
 ];
 

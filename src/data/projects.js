@@ -1,12 +1,81 @@
 export const GITHUB = "https://github.com/yeswanth-24";
 export const EMAIL = "yeshvanthreddy1999@gmail.com";
-export const LINKEDIN = "https://www.linkedin.com/";
-export const RESUME = "Yeshvanth-Resume.pdf";
+export const LINKEDIN = "https://www.linkedin.com/in/yeshvanth-reddy-guntaka";
+export const RESUME = "Yeshvanth-Reddy-Guntaka-Resume.pdf";
 
 export const shortBio = [
-  "I'm an ML/AI engineer who likes problems where the math has to be exactly right and the product still has to feel effortless.",
-  "I'm meticulous about the parts nobody sees — pure, testable cores; documented limits instead of overclaims.",
-  "And I finish things: eight open-source systems, every one with tests, CI and a README a stranger can follow.",
+  "I'm an ML/AI and robotics engineer who likes problems where the math has to be exactly right and the product still has to feel effortless — I've architected a 12-layer autonomous drone stack as a CTO, and built eight open-source ML systems on my own time.",
+  "I'm meticulous about the parts nobody sees: pure, testable cores, documented limits instead of overclaims.",
+  "And I finish things — every project ships with tests, CI and a README a stranger can follow.",
+];
+
+export const experience = [
+  {
+    role: "Data Analyst",
+    org: "VJ Creative Solutions LLC",
+    period: "Jan 2026 — Present",
+    place: "Casper, WY",
+    domain: "ml",
+    points: [
+      "Translate business questions into data-driven analyses, delivering insights through SQL, dashboards and visualizations.",
+      "Design and maintain ETL/ELT pipelines with data-quality checks that improve integration accuracy and cut downstream errors.",
+      "Automate infrastructure deployment with Ansible/SaltStack and containerized services, reducing manual configuration time.",
+    ],
+  },
+  {
+    role: "Chief Technology Officer",
+    org: "Entriya LLC",
+    period: "Jul 2025 — Dec 2025",
+    place: "Boston, MA",
+    domain: "robotics",
+    points: [
+      "Architected a 12-layer autonomous drone software stack with standards for modularity, observability and scalability.",
+      "Built high-performance ROS2 modules for sensor fusion, world modeling and obstacle avoidance.",
+      "Integrated MPC, EKF and consensus algorithms into an intent-to-command autonomy pipeline.",
+      "Directed technical strategy and cross-functional execution, improving overall system reliability.",
+    ],
+  },
+  {
+    role: "Software Developer Intern",
+    org: "Entriya LLC",
+    period: "Feb 2025 — Jul 2025",
+    place: "Boston, MA",
+    domain: "robotics",
+    points: [
+      "Engineered EKF-based state estimation and obstacle-avoidance logic, improving robustness under sensor noise and latency.",
+      "Implemented sensor-fusion and real-time messaging components for lower-latency perception and navigation.",
+      "Addressed embedded constraints through micro-kernel command arbitration and performance-focused design.",
+    ],
+  },
+  {
+    role: "Data Science Intern",
+    org: "Inmovidu Tech",
+    period: "May 2020 — Jul 2020",
+    place: "Hyderabad, India",
+    domain: "ml",
+    points: [
+      "Built and evaluated ML models with scikit-learn and TensorFlow, including feature engineering and hyperparameter tuning.",
+      "Performed end-to-end data preparation and exploratory analysis in Python, Pandas and NumPy.",
+      "Developed a real-time speech-to-text / text-to-speech assistant using NLP libraries in a production pipeline.",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "M.S. — Computer Information Systems",
+    school: "New England College",
+    place: "Henniker, NH",
+    period: "Dec 2024",
+    gpa: "3.67",
+  },
+  {
+    degree: "B.Tech — Computer Science",
+    school: "Anil Neerukonda Institute of Technology and Sciences",
+    place: "Visakhapatnam, India",
+    period: "Apr 2021",
+    gpa: "3.85",
+  },
 ];
 
 export const projects = [
@@ -108,19 +177,23 @@ export const projects = [
 export const skillGroups = [
   {
     label: "ML & Computer Vision",
-    items: ["Python", "Computer Vision", "MediaPipe", "OpenCV", "scikit-learn", "NumPy", "Time-Series Forecasting", "3D Geometry"],
+    items: ["Python", "Computer Vision", "MediaPipe", "OpenCV", "scikit-learn", "TensorFlow", "NumPy", "Pandas", "Time-Series Forecasting", "3D Geometry"],
   },
   {
     label: "Backend & Data",
-    items: ["FastAPI", "REST APIs", "Redis", "SQLite / SQL", "SQLAlchemy", "Streamlit", "Pandas"],
+    items: ["FastAPI", "Django", "Flask", "Node.js", "REST APIs", "Redis", "SQL / SQLite / MySQL", "SQLAlchemy", "Firebase"],
   },
   {
     label: "Frontend & Mobile",
     items: ["React", "JavaScript", "Tailwind CSS", "Flutter / Dart", "Vite"],
   },
   {
+    label: "Robotics & Autonomy",
+    items: ["ROS2", "Sensor fusion", "EKF", "MPC", "Obstacle avoidance", "Swarm intelligence", "Agent-based modeling"],
+  },
+  {
     label: "Engineering Practice",
-    items: ["Docker", "GitHub Actions", "pytest", "Git", "Clean Architecture"],
+    items: ["Docker", "GitHub Actions", "pytest", "Git", "Clean Architecture", "Ansible / SaltStack"],
   },
 ];
 
@@ -129,6 +202,7 @@ export const domains = {
   vision: { label: "Computer Vision", color: "teal" },
   ml: { label: "Machine Learning", color: "blue" },
   backend: { label: "Backend / Systems", color: "violet" },
+  robotics: { label: "Robotics / Autonomy", color: "amber" },
 };
 
 export const timeline = [

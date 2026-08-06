@@ -6,6 +6,7 @@ const SWATCH = {
   teal: "var(--color-brand)",
   blue: "var(--color-blue)",
   violet: "var(--color-violet)",
+  amber: "var(--color-amber)",
 };
 
 export default function Projects() {
@@ -24,7 +25,7 @@ export default function Projects() {
 
           {/* colour legend */}
           <div className="mt-5 flex flex-wrap gap-4">
-            {Object.values(domains).map((d) => (
+            {Object.entries(domains).filter(([k]) => projects.some((p) => p.domain === k)).map(([, d]) => (
               <span key={d.label} className="flex items-center gap-2 font-mono text-[11px] text-muted">
                 <span
                   className="h-2 w-2 rounded-full"

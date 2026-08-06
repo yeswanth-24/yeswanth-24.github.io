@@ -11,6 +11,11 @@ const capabilities = [
     points: ["scikit-learn · NumPy", "ARIMA forecasting", "Holdout evaluation"],
   },
   {
+    title: "Robotics & Autonomy",
+    body: "Perception-to-command pipelines on real hardware: state estimation under noisy sensors, obstacle avoidance, and control that has to hold at loop rate.",
+    points: ["ROS2 · sensor fusion", "EKF · MPC · consensus", "12-layer autonomy stack"],
+  },
+  {
     title: "Product Delivery",
     body: "The part that makes ML useful: APIs, dashboards, mobile clients, containers, and CI so the work survives contact with users.",
     points: ["FastAPI · React · Flutter", "Docker · GitHub Actions", "pytest coverage"],
@@ -25,7 +30,7 @@ export default function Capabilities() {
         <h2 className="text-2xl font-bold">What I do</h2>
         <p className="mt-1 mb-9 text-muted">Three things, applied together.</p>
 
-        <div className="grid gap-5 sm:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {capabilities.map((c) => (
             <div
               key={c.title}

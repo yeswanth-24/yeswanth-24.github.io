@@ -4,6 +4,7 @@ const ACCENT = {
   teal: "var(--color-brand)",
   blue: "var(--color-blue)",
   violet: "var(--color-violet)",
+  amber: "var(--color-amber)",
 };
 
 export default function ProjectCard({ project }) {

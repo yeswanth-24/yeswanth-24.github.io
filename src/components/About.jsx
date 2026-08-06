@@ -1,9 +1,9 @@
 import Reveal from "./Reveal";
 const facts = [
-  { k: "Focus", v: "Computer vision, applied ML, real-time systems" },
-  { k: "Stack", v: "Python · FastAPI · MediaPipe · React · Flutter" },
-  { k: "Range", v: "Model math → API → web + mobile → deploy" },
-  { k: "Standard", v: "Tested core, honest docs, shipped software" },
+  { k: "Focus", v: "Computer vision, applied ML, robotics & autonomy" },
+  { k: "Stack", v: "Python · ROS2 · FastAPI · MediaPipe · React · Flutter" },
+  { k: "Range", v: "EKF & control → model math → web + mobile → deploy" },
+  { k: "Education", v: "M.S. Computer Information Systems · B.Tech CS" },
 ];
 
 export default function About() {
@@ -28,6 +28,11 @@ export default function About() {
               core that's unit-tested against synthetic inputs with known answers, so correctness is
               provable without a camera. Cameras, models and databases plug in at the edges. When a
               system has a limitation, the README says so — I'd rather be trusted than impressive.
+            </p>
+            <p>
+              As CTO at Entriya I architected a 12-layer autonomous drone stack — ROS2 sensor
+              fusion, EKF state estimation, MPC control — where a wrong assumption doesn't produce a
+              bad metric, it produces a crash. That standard carries into everything else I build.
             </p>
             <p>
               And I finish things. Every project here has tests, CI, a README that a stranger can

@@ -2,6 +2,7 @@ import About from "./components/About";
 import Capabilities from "./components/Capabilities";
 import CaseStudy from "./components/CaseStudy";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
@@ -26,6 +27,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Philosophy />
         <Principles />
         <CaseStudy />
