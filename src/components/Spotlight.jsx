@@ -13,14 +13,14 @@ export default function Spotlight() {
   return (
     <section id="work" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
-        <p className="font-mono text-xs uppercase tracking-wide text-mint">Featured work</p>
-        <h2 className="mt-2 text-2xl font-bold sm:text-3xl">{project.title}</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">// Featured work</p>
+        <h2 className="mt-2 text-2xl font-bold gradient-text sm:text-3xl">{project.title}</h2>
         <p className="mt-3 max-w-3xl text-muted">{project.blurb}</p>
 
-        <ol className="mt-9 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
+        <ol className="hud scan mt-9 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
           {pipeline.map((p, i) => (
-            <li key={p.step} className="bg-panel p-5">
-              <span className="font-mono text-xs text-brand">0{i + 1}</span>
+            <li key={p.step} className="glass p-5">
+              <span className="font-mono text-xs tracking-[0.2em] text-brand">0{i + 1}</span>
               <h3 className="mt-2 font-semibold">{p.step}</h3>
               <p className="mt-1 text-sm leading-relaxed text-muted">{p.detail}</p>
             </li>
@@ -32,7 +32,7 @@ export default function Spotlight() {
             href={`${GITHUB}/${project.slug}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-line px-5 py-2.5 text-sm font-semibold transition hover:border-brand"
+            className="rounded-lg border border-brand/40 px-5 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand/10"
           >
             View the code ↗
           </a>

@@ -11,6 +11,13 @@ import Spotlight from "./components/Spotlight";
 export default function App() {
   return (
     <div className="min-h-screen">
+      {/* ambient futuristic backdrop */}
+      <div className="bg-fx" aria-hidden>
+        <span className="nebula nebula-a" />
+        <span className="nebula nebula-b" />
+        <span className="nebula nebula-c" />
+      </div>
+
       <Nav />
       <main>
         <Hero />

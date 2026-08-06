@@ -27,14 +27,14 @@ export default function Capabilities() {
           {capabilities.map((c) => (
             <div
               key={c.title}
-              className="rounded-xl border border-line bg-panel p-6 transition hover:border-brand"
+              className="hud glass glass-hover rounded-xl p-6"
             >
-              <h3 className="text-lg font-semibold">{c.title}</h3>
+              <h3 className="text-lg font-semibold gradient-text">{c.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{c.body}</p>
               <ul className="mt-4 space-y-1.5 border-t border-line pt-4">
                 {c.points.map((p) => (
                   <li key={p} className="font-mono text-xs text-muted">
-                    <span className="text-mint">▸ </span>
+                    <span className="text-brand">▸ </span>
                     {p}
                   </li>
                 ))}

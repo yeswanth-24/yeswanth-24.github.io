@@ -28,10 +28,10 @@ export default function About() {
           </div>
         </div>
 
-        <dl className="space-y-px overflow-hidden rounded-xl border border-line bg-line">
+        <dl className="hud scan space-y-px overflow-hidden rounded-xl border border-line bg-line">
           {facts.map((f) => (
-            <div key={f.k} className="bg-panel px-5 py-4">
-              <dt className="font-mono text-xs uppercase tracking-wide text-mint">{f.k}</dt>
+            <div key={f.k} className="glass px-5 py-4">
+              <dt className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">{f.k}</dt>
               <dd className="mt-1 text-sm">{f.v}</dd>
             </div>
           ))}
