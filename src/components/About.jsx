@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 const facts = [
   { k: "Focus", v: "Computer vision, applied ML, real-time systems" },
   { k: "Stack", v: "Python · FastAPI · MediaPipe · React · Flutter" },
@@ -9,7 +10,7 @@ export default function About() {
   return (
     <section id="about" className="border-t border-line">
       <div className="mx-auto grid max-w-5xl gap-10 px-6 py-16 md:grid-cols-[1.4fr_1fr]">
-        <div>
+        <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">// About</p>
           <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
             I go after the problems that don't have a library
@@ -34,8 +35,9 @@ export default function About() {
               them, all open source. Read the code, run the tests, break it.
             </p>
           </div>
-        </div>
+        </Reveal>
 
+        <Reveal delay={120}>
         <dl className="hud scan space-y-px self-start overflow-hidden rounded-xl border border-line bg-line">
           {facts.map((f) => (
             <div key={f.k} className="glass px-5 py-4">
@@ -46,6 +48,7 @@ export default function About() {
             </div>
           ))}
         </dl>
+        </Reveal>
       </div>
     </section>
   );

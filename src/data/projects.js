@@ -5,6 +5,8 @@ export const LINKEDIN = "https://www.linkedin.com/";
 export const projects = [
   {
     slug: "ai-digital-tailor",
+    domain: "vision",
+    impact: "83.8% holdout accuracy on the fit classifier",
     title: "AI Digital Tailor",
     kicker: "CV · ML · 3D",
     featured: true,
@@ -19,6 +21,8 @@ export const projects = [
   },
   {
     slug: "ai-workout-coach",
+    domain: "vision",
+    impact: "8 exercises coached in real time, 29 tests on rep logic",
     title: "AI Workout Coach",
     kicker: "Computer Vision",
     blurb:
@@ -28,6 +32,8 @@ export const projects = [
   },
   {
     slug: "gesture-coding-assistant",
+    domain: "vision",
+    impact: "6 gestures + a 9-intent voice grammar, 2 target languages",
     title: "Gesture Coding Assistant",
     kicker: "CV · NLP",
     blurb:
@@ -37,6 +43,8 @@ export const projects = [
   },
   {
     slug: "multi-agent-orchestrator",
+    domain: "backend",
+    impact: "5 autonomous agents with failure recovery over Redis Pub/Sub",
     title: "Multi-Agent Task Orchestrator",
     kicker: "Distributed Systems",
     blurb:
@@ -46,6 +54,8 @@ export const projects = [
   },
   {
     slug: "realtime-stream-engine",
+    domain: "backend",
+    impact: "Dual-tier alerting: threshold + z-score on Redis Streams",
     title: "Real-Time Stream Engine",
     kicker: "Streaming",
     blurb:
@@ -55,6 +65,8 @@ export const projects = [
   },
   {
     slug: "predictive-analytics-platform",
+    domain: "ml",
+    impact: "ARIMA pipeline from raw events to persisted forecasts",
     title: "Predictive Analytics Platform",
     kicker: "Forecasting",
     blurb:
@@ -64,6 +76,8 @@ export const projects = [
   },
   {
     slug: "personal-finance-assistant",
+    domain: "ml",
+    impact: "Intent + entity extraction across 12 finance record types",
     title: "Personal Finance Assistant",
     kicker: "NLP",
     blurb:
@@ -73,6 +87,8 @@ export const projects = [
   },
   {
     slug: "options-strategy-visualizer",
+    domain: "backend",
+    impact: "One Flutter codebase shipping to 6 platforms",
     title: "Options Strategy Visualizer",
     kicker: "Mobile · Fintech",
     blurb:
@@ -100,3 +116,67 @@ export const skillGroups = [
     items: ["Docker", "GitHub Actions", "pytest", "Git", "Clean Architecture"],
   },
 ];
+
+
+export const domains = {
+  vision: { label: "Computer Vision", color: "teal" },
+  ml: { label: "Machine Learning", color: "blue" },
+  backend: { label: "Backend / Systems", color: "violet" },
+};
+
+export const timeline = [
+  {
+    slug: "personal-finance-assistant",
+    title: "Personal Finance Assistant",
+    note: "First end-to-end ML product: intent classification wired to a real database and a chat UI.",
+    theme: "Learning to ship a model as a product",
+  },
+  {
+    slug: "predictive-analytics-platform",
+    title: "Predictive Analytics Platform",
+    note: "Moved from single models to pipelines — ETL, training, persisted artifacts, forecasts.",
+    theme: "Pipelines over notebooks",
+  },
+  {
+    slug: "realtime-stream-engine",
+    title: "Real-Time Stream Engine",
+    note: "Redis Streams, consumer groups and anomaly detection under continuous load.",
+    theme: "Systems that run without me",
+  },
+  {
+    slug: "multi-agent-orchestrator",
+    title: "Multi-Agent Orchestrator",
+    note: "Five coordinating agents that plan, execute, monitor and recover autonomously.",
+    theme: "Coordination and self-healing",
+  },
+  {
+    slug: "ai-workout-coach",
+    title: "AI Workout Coach",
+    note: "Computer vision in real time — pose geometry turned into coaching a person can act on.",
+    theme: "Real-time constraints",
+  },
+  {
+    slug: "gesture-coding-assistant",
+    title: "Gesture Coding Assistant",
+    note: "Vision plus language: gestures and speech compiled into working source code.",
+    theme: "Multimodal interfaces",
+  },
+  {
+    slug: "ai-digital-tailor",
+    title: "AI Digital Tailor",
+    note: "Everything at once — CV, geometry, a trained classifier, 3D reconstruction, web + mobile clients, Docker.",
+    theme: "Full-stack ML product",
+  },
+];
+
+export const philosophy = {
+  statement: "I design systems that stay verifiable under real-time constraints.",
+  body:
+    "Real time is where sloppy systems fail. A model that is only correct in a notebook is not correct. So I keep the hard part — the geometry, the state machine, the classifier — pure and provable, and let the messy world plug in at the edges. If I cannot write a test that proves it, I do not consider it built.",
+  pillars: [
+    { k: "Verifiable", v: "Pure cores tested against inputs with known answers" },
+    { k: "Real-time", v: "Designed for camera framerate, not batch convenience" },
+    { k: "Honest", v: "Documented limits and a stated upgrade path" },
+    { k: "Finished", v: "Tests, CI, container, README — every repo, every time" },
+  ],
+};

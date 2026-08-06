@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 const metrics = [
   { value: "8", label: "systems shipped", sub: "all open source, all documented" },
   { value: "93", label: "automated tests", sub: "on the three newest projects alone" },
@@ -9,6 +10,7 @@ export default function Proof() {
   return (
     <section className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
+      <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">// Receipts</p>
         <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Evidence over adjectives</h2>
         <p className="mt-3 max-w-2xl text-muted">
@@ -25,6 +27,7 @@ export default function Proof() {
             </div>
           ))}
         </dl>
+      </Reveal>
       </div>
     </section>
   );

@@ -1,9 +1,11 @@
 import { skillGroups } from "../data/projects";
+import Reveal from "./Reveal";
 
 export default function Skills() {
   return (
     <section id="skills" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
+      <Reveal>
         <h2 className="text-2xl font-bold">Skills</h2>
         <p className="mt-1 mb-9 text-muted">Used across the projects above — not aspirational.</p>
 
@@ -24,6 +26,7 @@ export default function Skills() {
             </div>
           ))}
         </div>
+      </Reveal>
       </div>
     </section>
   );

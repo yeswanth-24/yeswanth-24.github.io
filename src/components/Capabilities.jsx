@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 const capabilities = [
   {
     title: "Computer Vision",
@@ -20,6 +21,7 @@ export default function Capabilities() {
   return (
     <section className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
+      <Reveal>
         <h2 className="text-2xl font-bold">What I do</h2>
         <p className="mt-1 mb-9 text-muted">Three things, applied together.</p>
 
@@ -42,6 +44,7 @@ export default function Capabilities() {
             </div>
           ))}
         </div>
+      </Reveal>
       </div>
     </section>
   );

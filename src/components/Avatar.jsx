@@ -23,6 +23,8 @@ export default function Avatar() {
           alt="Yeshvanth — stylized avatar"
           width="800"
           height="800"
+          decoding="async"
+          fetchPriority="high"
           className="relative z-10 w-full drop-shadow-[0_0_28px_rgba(34,211,238,0.35)]"
         />
         {/* base glow under the figure */}

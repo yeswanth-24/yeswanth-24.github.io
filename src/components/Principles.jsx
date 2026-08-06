@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 const principles = [
   {
     n: "01",
@@ -33,6 +34,7 @@ export default function Principles() {
   return (
     <section id="principles" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
+      <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">// How I work</p>
         <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
           Standards I don't negotiate on
@@ -53,6 +55,7 @@ export default function Principles() {
             </article>
           ))}
         </div>
+      </Reveal>
       </div>
     </section>
   );

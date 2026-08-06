@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 const stages = [
   {
     label: "The problem",
@@ -25,6 +26,7 @@ export default function CaseStudy() {
   return (
     <section id="hard-problem" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
+      <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">
           // Hardest problem I've solved
         </p>
@@ -50,6 +52,7 @@ export default function CaseStudy() {
           Full write-up, math and tests in the repository — including what the model{" "}
           <span className="text-mint">can't</span> do.
         </p>
+      </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { GITHUB, projects } from "../data/projects";
+import Reveal from "./Reveal";
 
 const pipeline = [
   { step: "Capture", detail: "Guided front / side / back photos with live pose coaching" },
@@ -13,6 +14,7 @@ export default function Spotlight() {
   return (
     <section id="work" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-16">
+      <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">// Featured work</p>
         <h2 className="mt-2 text-2xl font-bold gradient-text sm:text-3xl">{project.title}</h2>
         <p className="mt-3 max-w-3xl text-muted">{project.blurb}</p>
@@ -40,6 +42,7 @@ export default function Spotlight() {
             Web app · Flutter mobile client · Docker
           </span>
         </div>
+      </Reveal>
       </div>
     </section>
   );

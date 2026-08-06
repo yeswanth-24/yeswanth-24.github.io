@@ -5,11 +5,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
+import Philosophy from "./components/Philosophy";
 import Principles from "./components/Principles";
 import Projects from "./components/Projects";
 import Proof from "./components/Proof";
 import Skills from "./components/Skills";
 import Spotlight from "./components/Spotlight";
+import Timeline from "./components/Timeline";
 
 export default function App() {
   return (
@@ -24,8 +26,10 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Philosophy />
         <Principles />
         <CaseStudy />
+        <Timeline />
         <Capabilities />
         <Spotlight />
         <Projects />

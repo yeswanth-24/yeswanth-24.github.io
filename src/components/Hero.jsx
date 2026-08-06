@@ -24,54 +24,59 @@ export default function Hero() {
   }, []);
 
   return (
-    <header className="mx-auto max-w-5xl px-6 pt-24 pb-20">
-     <div className="grid items-center gap-12 md:grid-cols-[1.25fr_1fr]">
-      <div>
-      <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/5 px-3 py-1 font-mono text-xs tracking-wide text-brand">
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-70" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
-        </span>
-        AVAILABLE FOR ML/AI ENGINEERING ROLES
+    <header id="top" className="mx-auto max-w-5xl px-6 pt-24 pb-20">
+      <div className="grid items-center gap-12 md:grid-cols-[1.25fr_1fr]">
+        <div className="relative">
+          {/* animated geometry behind the name */}
+          <div className="name-fx" aria-hidden>
+            <span />
+            <span />
+            <span />
+          </div>
+
+          <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/5 px-3 py-1 font-mono text-xs tracking-wide text-brand">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
+            </span>
+            AVAILABLE FOR ML/AI ENGINEERING ROLES
+          </div>
+
+          <h1 className="animate-fade-up mt-7 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
+            Hi, I'm Yeshvanth.
+            <br />
+            <span className="text-muted">I build </span>
+            <span key={i} className="gradient-text glow-text animate-fade-up">
+              {ROLES[i]}
+            </span>
+            <span className="ml-1 inline-block h-[0.9em] w-[3px] animate-pulse bg-brand align-[-0.08em]" />
+          </h1>
+
+          <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            I take on the problems that don't have a library — and finish them. Model math through
+            tested APIs, web and mobile clients, and one-command deploys.
+          </p>
+
+          <div className="animate-fade-up mt-9 flex flex-wrap gap-3">
+            <a
+              href="#projects"
+              className="glow-ring rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition hover:brightness-110"
+            >
+              See my work
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="rounded-lg border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
+            >
+              Hire me
+            </a>
+          </div>
+        </div>
+
+        <div className="animate-fade-up order-first md:order-last">
+          <Avatar />
+        </div>
       </div>
-
-      <h1 className="animate-fade-up mt-7 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
-        Hi, I'm Yeshvanth.
-        <br />
-        <span className="text-muted">I build </span>
-        <span key={i} className="gradient-text glow-text animate-fade-up">
-          {ROLES[i]}
-        </span>
-        <span className="ml-1 inline-block h-[0.9em] w-[3px] animate-pulse bg-brand align-[-0.08em]" />
-      </h1>
-
-      <p className="animate-fade-up mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-        I take on the problems that don't have a library — and finish them. Model math through
-        tested APIs, web and mobile clients, and one-command deploys. Eight open-source systems,
-        93 automated tests, zero half-built repos.
-      </p>
-
-      <div className="animate-fade-up mt-9 flex flex-wrap gap-3">
-        <a
-          href="#work"
-          className="glow-ring rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition hover:brightness-110"
-        >
-          See my work
-        </a>
-        <a
-          href={`mailto:${EMAIL}`}
-          className="rounded-lg border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
-        >
-          Hire me
-        </a>
-      </div>
-
-      </div>
-
-      <div className="animate-fade-up order-first md:order-last">
-        <Avatar />
-      </div>
-     </div>
 
       <dl className="hud scan animate-fade-up mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
         {TELEMETRY.map(([k, v]) => (
