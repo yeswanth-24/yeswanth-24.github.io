@@ -131,3 +131,49 @@ body {
   .nebula, .scan::after, .name-fx span { animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- micro-interactions ---------- */
+a, button { transition: color .2s ease, background-color .2s ease, border-color .2s ease,
+                        box-shadow .25s ease, transform .18s ease, opacity .2s ease; }
+
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-120%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+}
+.btn-primary:hover::after { transform: translateX(120%); transition: transform .7s ease; }
+.btn-primary:hover, .btn-ghost:hover { transform: translateY(-2px); }
+.btn-primary:active, .btn-ghost:active { transform: translateY(0); }
+
+/* animated underline for text links */
+.link-sweep { position: relative; }
+.link-sweep::after {
+  content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 100%;
+  background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .3s ease;
+}
+.link-sweep:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* nav link active indicator */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 2px;
+  background: var(--color-brand); transform: scaleX(0); transition: transform .25s ease;
+}
+.nav-link[data-active="true"]::after { transform: scaleX(1); }
+
+/* tag + chip hover */
+.chip { transition: transform .18s ease, border-color .2s ease, color .2s ease; }
+.chip:hover { transform: translateY(-2px); }
+
+/* emblem watermark (uses the artwork) */
+.emblem-mark {
+  position: absolute; pointer-events: none; z-index: -1;
+  mix-blend-mode: screen; opacity: .22;
+  mask-image: radial-gradient(circle at 50% 50%, #000 35%, transparent 72%);
+}
+:root[data-theme="light"] .emblem-mark { mix-blend-mode: multiply; opacity: .10; }
+
+/* focus visibility (keyboard users) */
+:where(a, button):focus-visible {
+  outline: 2px solid var(--color-brand); outline-offset: 3px; border-radius: 6px;
+}

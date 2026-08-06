@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { EMAIL } from "../data/projects";
+import { EMAIL, RESUME, shortBio } from "../data/projects";
 import Avatar from "./Avatar";
 
 const ROLES = [
@@ -24,10 +24,20 @@ export default function Hero() {
   }, []);
 
   return (
-    <header id="top" className="mx-auto max-w-5xl px-6 pt-24 pb-20">
+    <header id="top" className="relative mx-auto max-w-5xl px-6 pt-24 pb-20">
+      {/* emblem artwork, faint, behind the name */}
+      <img
+        src={`${import.meta.env.BASE_URL}emblem.png`}
+        alt=""
+        aria-hidden
+        width="640"
+        height="601"
+        decoding="async"
+        className="emblem-mark left-[-90px] top-[40px] w-[560px] max-w-none"
+      />
+
       <div className="grid items-center gap-12 md:grid-cols-[1.25fr_1fr]">
         <div className="relative">
-          {/* animated geometry behind the name */}
           <div className="name-fx" aria-hidden>
             <span />
             <span />
@@ -60,13 +70,20 @@ export default function Hero() {
           <div className="animate-fade-up mt-9 flex flex-wrap gap-3">
             <a
               href="#projects"
-              className="glow-ring rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition hover:brightness-110"
+              className="btn-primary glow-ring rounded-lg bg-brand px-6 py-3 font-semibold text-ink hover:brightness-110"
             >
               See my work
             </a>
             <a
+              href={`${import.meta.env.BASE_URL}${RESUME}`}
+              download
+              className="btn-ghost rounded-lg border border-brand/50 px-6 py-3 font-semibold text-brand hover:bg-brand/10"
+            >
+              ↓ Download resume
+            </a>
+            <a
               href={`mailto:${EMAIL}`}
-              className="rounded-lg border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
+              className="btn-ghost rounded-lg border border-line px-6 py-3 font-semibold hover:border-brand hover:text-brand"
             >
               Hire me
             </a>
@@ -78,7 +95,19 @@ export default function Hero() {
         </div>
       </div>
 
-      <dl className="hud scan animate-fade-up mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
+      {/* tiny about — three lines, above the fold */}
+      <div className="hud glass animate-fade-up mt-14 rounded-xl p-6">
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand">// About me</p>
+        <div className="mt-3 space-y-1.5">
+          {shortBio.map((line) => (
+            <p key={line} className="text-sm leading-relaxed text-muted">
+              {line}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      <dl className="hud scan animate-fade-up mt-5 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
         {TELEMETRY.map(([k, v]) => (
           <div key={k} className="glass px-5 py-4">
             <dt className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">{k}</dt>

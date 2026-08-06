@@ -1,6 +1,13 @@
 export const GITHUB = "https://github.com/yeswanth-24";
 export const EMAIL = "yeshvanthreddy1999@gmail.com";
 export const LINKEDIN = "https://www.linkedin.com/";
+export const RESUME = "Yeshvanth-Resume.pdf";
+
+export const shortBio = [
+  "I'm an ML/AI engineer who likes problems where the math has to be exactly right and the product still has to feel effortless.",
+  "I'm meticulous about the parts nobody sees — pure, testable cores; documented limits instead of overclaims.",
+  "And I finish things: eight open-source systems, every one with tests, CI and a README a stranger can follow.",
+];
 
 export const projects = [
   {

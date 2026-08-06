@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GITHUB } from "../data/projects";
+import { GITHUB, RESUME } from "../data/projects";
 import Emblem from "./Emblem";
 import ThemeToggle from "./ThemeToggle";
 
@@ -60,7 +60,8 @@ export default function Nav() {
             <a
               key={l.id}
               href={`#${l.id}`}
-              className={`font-mono text-[11px] uppercase tracking-[0.14em] transition-colors ${
+              data-active={active === l.id}
+              className={`nav-link font-mono text-[11px] uppercase tracking-[0.14em] ${
                 active === l.id ? "text-brand" : "text-muted hover:text-body"
               }`}
             >
@@ -72,10 +73,17 @@ export default function Nav() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <a
+            href={`${import.meta.env.BASE_URL}${RESUME}`}
+            download
+            className="btn-ghost hidden rounded-lg border border-brand/40 px-3 py-1.5 font-mono text-xs text-brand hover:bg-brand/10 sm:block"
+          >
+            ↓ Resume
+          </a>
+          <a
             href={GITHUB}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-brand/40 px-3 py-1.5 font-mono text-xs text-brand transition hover:bg-brand/10"
+            className="btn-ghost rounded-lg border border-line px-3 py-1.5 font-mono text-xs text-muted hover:border-brand hover:text-brand"
           >
             GitHub ↗
           </a>

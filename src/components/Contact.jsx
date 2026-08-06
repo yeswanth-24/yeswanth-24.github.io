@@ -1,4 +1,4 @@
-import { EMAIL, GITHUB, LINKEDIN } from "../data/projects";
+import { EMAIL, GITHUB, LINKEDIN, RESUME } from "../data/projects";
 import Emblem from "./Emblem";
 import Reveal from "./Reveal";
 
@@ -25,7 +25,7 @@ export default function Contact() {
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
                 href={`mailto:${EMAIL}`}
-                className="glow-ring rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition hover:brightness-110"
+                className="btn-primary glow-ring rounded-lg bg-brand px-6 py-3 font-semibold text-ink hover:brightness-110"
               >
                 {EMAIL}
               </a>
@@ -33,15 +33,22 @@ export default function Contact() {
                 href={GITHUB}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
+                className="btn-ghost rounded-lg border border-line px-6 py-3 font-semibold hover:border-brand hover:text-brand"
               >
                 GitHub
+              </a>
+              <a
+                href={`${import.meta.env.BASE_URL}${RESUME}`}
+                download
+                className="btn-ghost rounded-lg border border-brand/50 px-6 py-3 font-semibold text-brand hover:bg-brand/10"
+              >
+                ↓ Download resume
               </a>
               <a
                 href={LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
+                className="btn-ghost rounded-lg border border-line px-6 py-3 font-semibold hover:border-brand hover:text-brand"
               >
                 LinkedIn
               </a>

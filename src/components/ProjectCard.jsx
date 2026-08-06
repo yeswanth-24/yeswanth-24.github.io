@@ -68,7 +68,7 @@ export default function ProjectCard({ project }) {
         {tags.map((t) => (
           <span
             key={t}
-            className="rounded border border-line bg-white/[0.03] px-2 py-1 font-mono text-[11px] text-muted"
+            className="chip rounded border border-line bg-white/[0.03] px-2 py-1 font-mono text-[11px] text-muted hover:border-brand/50 hover:text-brand"
           >
             {t}
           </span>

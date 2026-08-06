@@ -1,3 +1,4 @@
+import { RESUME } from "../data/projects";
 import Emblem from "./Emblem";
 
 export default function Footer() {
@@ -8,8 +9,17 @@ export default function Footer() {
           <Emblem size={26} />
           <span>© {new Date().getFullYear()} Yeshvanth</span>
         </span>
-        <span className="font-mono text-xs tracking-[0.14em] text-brand/70">
-          REACT · VITE · TAILWIND
+        <span className="flex items-center gap-5">
+          <a
+            href={`${import.meta.env.BASE_URL}${RESUME}`}
+            download
+            className="link-sweep font-mono text-xs text-brand"
+          >
+            ↓ Download resume
+          </a>
+          <span className="font-mono text-xs tracking-[0.14em] text-brand/70">
+            REACT · VITE · TAILWIND
+          </span>
         </span>
       </div>
     </footer>
