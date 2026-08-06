@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { EMAIL } from "../data/projects";
+import Avatar from "./Avatar";
 
 const ROLES = [
   "computer vision pipelines",
@@ -23,7 +24,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <header className="mx-auto max-w-5xl px-6 pt-28 pb-20">
+    <header className="mx-auto max-w-5xl px-6 pt-24 pb-20">
+     <div className="grid items-center gap-12 md:grid-cols-[1.25fr_1fr]">
+      <div>
       <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/5 px-3 py-1 font-mono text-xs tracking-wide text-brand">
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-70" />
@@ -62,6 +65,13 @@ export default function Hero() {
           Hire me
         </a>
       </div>
+
+      </div>
+
+      <div className="animate-fade-up order-first md:order-last">
+        <Avatar />
+      </div>
+     </div>
 
       <dl className="hud scan animate-fade-up mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
         {TELEMETRY.map(([k, v]) => (
