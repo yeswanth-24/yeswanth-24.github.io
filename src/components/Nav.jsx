@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { GITHUB } from "../data/projects";
 
 const links = [
+  { href: "#about", label: "About" },
+  { href: "#work", label: "Work" },
   { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -23,8 +24,10 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
-        <span className="font-mono text-sm font-semibold text-mint">yeshvanth@ml:~$</span>
-        <div className="flex items-center gap-6 text-sm">
+        <a href="#" className="font-mono text-sm font-semibold text-mint">
+          yeshvanth@ml:~$
+        </a>
+        <div className="hidden items-center gap-6 text-sm sm:flex">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-muted transition-colors hover:text-body">
               {l.label}
@@ -34,9 +37,9 @@ export default function Nav() {
             href={GITHUB}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted transition-colors hover:text-body"
+            className="rounded-lg border border-line px-3 py-1.5 text-xs font-semibold transition hover:border-brand"
           >
-            GitHub
+            GitHub ↗
           </a>
         </div>
       </div>
