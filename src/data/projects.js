@@ -81,6 +81,8 @@ export const education = [
 export const projects = [
   {
     slug: "ai-digital-tailor",
+    demo: "body",
+    metrics: [{ v: "83.8%", k: "fit-model holdout accuracy" }, { v: "0.03 ms", k: "size inference per body" }, { v: "0.4 ms", k: "3D mesh build (462 verts)" }],
     domain: "vision",
     impact: "83.8% holdout accuracy on the fit classifier",
     title: "AI Digital Tailor",
@@ -97,6 +99,8 @@ export const projects = [
   },
   {
     slug: "ai-workout-coach",
+    demo: "pose",
+    metrics: [{ v: "0.011 ms", k: "per-frame rep analysis" }, { v: "89k fps", k: "analysis-layer throughput" }, { v: "8", k: "exercises, 29 rep-logic tests" }],
     domain: "vision",
     impact: "8 exercises coached in real time, 29 tests on rep logic",
     title: "AI Workout Coach",
@@ -108,6 +112,8 @@ export const projects = [
   },
   {
     slug: "gesture-coding-assistant",
+    demo: "hand",
+    metrics: [{ v: "0.011 ms", k: "per-frame gesture pipeline" }, { v: "0.004 ms", k: "voice command → source code" }, { v: "6 / 9", k: "gestures / voice intents" }],
     domain: "vision",
     impact: "6 gestures + a 9-intent voice grammar, 2 target languages",
     title: "Gesture Coding Assistant",
@@ -119,6 +125,8 @@ export const projects = [
   },
   {
     slug: "multi-agent-orchestrator",
+    demo: "agents",
+    metrics: [{ v: "5", k: "coordinating agents" }, { v: "Pub/Sub", k: "Redis message bus" }, { v: "auto", k: "failure detection & recovery" }],
     domain: "backend",
     impact: "5 autonomous agents with failure recovery over Redis Pub/Sub",
     title: "Multi-Agent Task Orchestrator",
@@ -130,6 +138,8 @@ export const projects = [
   },
   {
     slug: "realtime-stream-engine",
+    demo: "stream",
+    metrics: [{ v: "2-tier", k: "warning + critical alert streams" }, { v: "z-score", k: "statistical anomaly detection" }, { v: "groups", k: "Redis consumer-group scaling" }],
     domain: "backend",
     impact: "Dual-tier alerting: threshold + z-score on Redis Streams",
     title: "Real-Time Stream Engine",
@@ -141,6 +151,8 @@ export const projects = [
   },
   {
     slug: "predictive-analytics-platform",
+    demo: "forecast",
+    metrics: [{ v: "ARIMA", k: "trained + persisted artifacts" }, { v: "5-stage", k: "generate → ETL → fit → forecast → serve" }, { v: "SQLite", k: "warehouse + forecast tables" }],
     domain: "ml",
     impact: "ARIMA pipeline from raw events to persisted forecasts",
     title: "Predictive Analytics Platform",
@@ -152,6 +164,8 @@ export const projects = [
   },
   {
     slug: "personal-finance-assistant",
+    demo: "nlp",
+    metrics: [{ v: "12", k: "finance record types routed" }, { v: "intent+NER", k: "two-stage understanding" }, { v: "React", k: "chat UI on FastAPI" }],
     domain: "ml",
     impact: "Intent + entity extraction across 12 finance record types",
     title: "Personal Finance Assistant",
@@ -163,6 +177,8 @@ export const projects = [
   },
   {
     slug: "options-strategy-visualizer",
+    demo: "payoff",
+    metrics: [{ v: "6", k: "platforms from one codebase" }, { v: "live", k: "payoff engine + charts" }, { v: "OAuth", k: "Google sign-in, Hive offline sync" }],
     domain: "backend",
     impact: "One Flutter codebase shipping to 6 platforms",
     title: "Options Strategy Visualizer",
@@ -208,42 +224,56 @@ export const domains = {
 export const timeline = [
   {
     slug: "personal-finance-assistant",
+    demo: "nlp",
+    metrics: [{ v: "12", k: "finance record types routed" }, { v: "intent+NER", k: "two-stage understanding" }, { v: "React", k: "chat UI on FastAPI" }],
     title: "Personal Finance Assistant",
     note: "First end-to-end ML product: intent classification wired to a real database and a chat UI.",
     theme: "Learning to ship a model as a product",
   },
   {
     slug: "predictive-analytics-platform",
+    demo: "forecast",
+    metrics: [{ v: "ARIMA", k: "trained + persisted artifacts" }, { v: "5-stage", k: "generate → ETL → fit → forecast → serve" }, { v: "SQLite", k: "warehouse + forecast tables" }],
     title: "Predictive Analytics Platform",
     note: "Moved from single models to pipelines — ETL, training, persisted artifacts, forecasts.",
     theme: "Pipelines over notebooks",
   },
   {
     slug: "realtime-stream-engine",
+    demo: "stream",
+    metrics: [{ v: "2-tier", k: "warning + critical alert streams" }, { v: "z-score", k: "statistical anomaly detection" }, { v: "groups", k: "Redis consumer-group scaling" }],
     title: "Real-Time Stream Engine",
     note: "Redis Streams, consumer groups and anomaly detection under continuous load.",
     theme: "Systems that run without me",
   },
   {
     slug: "multi-agent-orchestrator",
+    demo: "agents",
+    metrics: [{ v: "5", k: "coordinating agents" }, { v: "Pub/Sub", k: "Redis message bus" }, { v: "auto", k: "failure detection & recovery" }],
     title: "Multi-Agent Orchestrator",
     note: "Five coordinating agents that plan, execute, monitor and recover autonomously.",
     theme: "Coordination and self-healing",
   },
   {
     slug: "ai-workout-coach",
+    demo: "pose",
+    metrics: [{ v: "0.011 ms", k: "per-frame rep analysis" }, { v: "89k fps", k: "analysis-layer throughput" }, { v: "8", k: "exercises, 29 rep-logic tests" }],
     title: "AI Workout Coach",
     note: "Computer vision in real time — pose geometry turned into coaching a person can act on.",
     theme: "Real-time constraints",
   },
   {
     slug: "gesture-coding-assistant",
+    demo: "hand",
+    metrics: [{ v: "0.011 ms", k: "per-frame gesture pipeline" }, { v: "0.004 ms", k: "voice command → source code" }, { v: "6 / 9", k: "gestures / voice intents" }],
     title: "Gesture Coding Assistant",
     note: "Vision plus language: gestures and speech compiled into working source code.",
     theme: "Multimodal interfaces",
   },
   {
     slug: "ai-digital-tailor",
+    demo: "body",
+    metrics: [{ v: "83.8%", k: "fit-model holdout accuracy" }, { v: "0.03 ms", k: "size inference per body" }, { v: "0.4 ms", k: "3D mesh build (462 verts)" }],
     title: "AI Digital Tailor",
     note: "Everything at once — CV, geometry, a trained classifier, 3D reconstruction, web + mobile clients, Docker.",
     theme: "Full-stack ML product",

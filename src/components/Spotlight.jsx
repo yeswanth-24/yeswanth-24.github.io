@@ -1,4 +1,5 @@
 import { GITHUB, projects } from "../data/projects";
+import Demo from "./Demo";
 import Reveal from "./Reveal";
 
 const pipeline = [
@@ -18,6 +19,10 @@ export default function Spotlight() {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand">// Featured work</p>
         <h2 className="mt-2 text-2xl font-bold gradient-text sm:text-3xl">{project.title}</h2>
         <p className="mt-3 max-w-3xl text-muted">{project.blurb}</p>
+
+        <div className="mt-8 max-w-lg">
+          <Demo kind="body" accent="var(--color-brand)" />
+        </div>
 
         <ol className="hud scan mt-9 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
           {pipeline.map((p, i) => (

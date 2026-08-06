@@ -1,4 +1,5 @@
 import { GITHUB, domains } from "../data/projects";
+import Demo from "./Demo";
 
 const ACCENT = {
   teal: "var(--color-brand)",
@@ -8,7 +9,8 @@ const ACCENT = {
 };
 
 export default function ProjectCard({ project }) {
-  const { slug, title, kicker, blurb, tags, highlights, featured, domain, impact } = project;
+  const { slug, title, kicker, blurb, tags, highlights, featured, domain, impact, demo, metrics } =
+    project;
   const meta = domains[domain] ?? domains.vision;
   const accent = ACCENT[meta.color];
 
@@ -19,6 +21,8 @@ export default function ProjectCard({ project }) {
         featured ? "sm:col-span-2" : ""
       }`}
     >
+      {demo && <Demo kind={demo} accent={accent} />}
+
       <div className="flex flex-wrap items-center gap-2">
         <span
           className="w-fit rounded-full px-3 py-0.5 font-mono text-[11px] uppercase tracking-[0.16em]"
@@ -54,6 +58,19 @@ export default function ProjectCard({ project }) {
 
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{blurb}</p>
 
+      {metrics && (
+        <dl className="mt-5 grid grid-cols-3 gap-px overflow-hidden rounded-lg border border-line bg-line">
+          {metrics.map((m) => (
+            <div key={m.k} className="bg-ink/40 px-3 py-2.5">
+              <dt className="font-mono text-sm font-semibold" style={{ color: accent }}>
+                {m.v}
+              </dt>
+              <dd className="mt-0.5 text-[10px] leading-snug text-muted">{m.k}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+
       {highlights && (
         <ul className="mt-4 space-y-1">
           {highlights.map((h) => (
@@ -65,15 +82,21 @@ export default function ProjectCard({ project }) {
         </ul>
       )}
 
-      <div className="mt-5 flex flex-wrap gap-2">
-        {tags.map((t) => (
-          <span
-            key={t}
-            className="chip rounded border border-line bg-white/[0.03] px-2 py-1 font-mono text-[11px] text-muted hover:border-brand/50 hover:text-brand"
-          >
-            {t}
-          </span>
-        ))}
+      <div className="mt-5 border-t border-line pt-4">
+        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
+          Tech used
+        </span>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {tags.map((t) => (
+            <span
+              key={t}
+              className="chip rounded-md px-2 py-1 font-mono text-[11px]"
+              style={{ color: accent, border: `1px solid ${accent}40`, background: `${accent}0f` }}
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </article>
   );
