@@ -10,9 +10,9 @@ const ROLES = [
 ];
 
 const TELEMETRY = [
-  ["SYS", "8 systems online"],
-  ["CORE", "vision · ml · nlp"],
-  ["STATUS", "open to roles"],
+  ["SHIPPED", "8 systems · all open source"],
+  ["RIGOR", "93 tests · CI on every repo"],
+  ["RANGE", "model math → mobile app"],
 ];
 
 export default function Hero() {
@@ -43,8 +43,9 @@ export default function Hero() {
       </h1>
 
       <p className="animate-fade-up mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-        ML/AI engineer working end to end — from the geometry and model math through tested APIs,
-        web and mobile clients, and one-command deploys. Eight open-source systems, all shipped.
+        I take on the problems that don't have a library — and finish them. Model math through
+        tested APIs, web and mobile clients, and one-command deploys. Eight open-source systems,
+        93 automated tests, zero half-built repos.
       </p>
 
       <div className="animate-fade-up mt-9 flex flex-wrap gap-3">

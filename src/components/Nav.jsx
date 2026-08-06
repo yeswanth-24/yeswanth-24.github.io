@@ -3,8 +3,9 @@ import { GITHUB } from "../data/projects";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#principles", label: "Method" },
+  { href: "#hard-problem", label: "Deep dive" },
   { href: "#work", label: "Work" },
-  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 
